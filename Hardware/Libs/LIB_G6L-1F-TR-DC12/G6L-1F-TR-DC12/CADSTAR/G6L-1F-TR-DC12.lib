@@ -1,0 +1,18 @@
+.G6L-1F-TR-DC12 :1 ;Low Signal Relays - PCB 12VDC SPST-NO Low profile T and R
+G6L1FTRDC5
+*STM K
+*NGS
+*PLB 2="N.O." 4="COM" 5="COIL_1" 8="COIL_2"
+*MXP 4
+*DFN G6L-1F-TR-DC12
+~!Manufacturer_Name (Omron Electronics)
+~!Manufacturer_Part_Number (G6L-1F-TR-DC12)
+~!Mouser Part Number (653-G6L-1F-TR-DC12)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=653-G6L-1F-TR-DC12)
+~!RS Part Number (-)
+~!RS Price/Stock (-)
+~!Link Datasheet (https://componentsearchengine.com/Datasheets/1/G6L-1F-TR-DC12.pdf)
+~!Height (4.4mm)
+~!3D_Model (G6L-1F-TR-DC12)
+G6L-1F-TR-DC12
+2.1!U 4.1!U 5.1!U 8.1!U 

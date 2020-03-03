@@ -1,0 +1,28 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# 16SVPC100M
+#
+DEF 16SVPC100M U 0 40 N N 1 L N
+F0 "U" 40 25 50 H V L BNN
+F1 "16SVPC100M" 40 -165 50 H V L BNN
+F2 "CAPAE0607X600N" 0 0 50 H I L BNN
+F3 "Radial Panasonic" 0 0 50 H I L BNN
+F4 "Panasonic" 0 0 50 H I L BNN
+F5 "P16468CT-ND" 0 0 50 H I L BNN
+F6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/16SVPC100M/P16468CT-ND/4204263?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" 0 0 50 H I L BNN
+F7 "16SVPC100M" 0 0 50 H I L BNN
+F8 "SVPC Series 16 V 100 uF Ø 6.3 x 5.9 mm Surface Mount Polymer Aluminum Capacitor" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -100 0 100 0 N
+P 2 0 0 6 0 -40 0 -100 N
+A -0 -199 160 2320 2700 0 0 10 N 0 -39 98 -73
+A -0 -200 160 2700 3070 0 0 10 N -97 -73 0 -40
+X + + 0 300 300 D 40 40 0 0 P 
+X - - 0 -400 300 U 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library

@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "G6L-1F-TR-DC12"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2019-03-04-22:35:50)
+    (mountForm default
+        (footprintRef "G6L1FTRDC5")
+        (spec "System")
+    )
+)

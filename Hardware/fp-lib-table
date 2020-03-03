@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name Arduino_MEGA)(type KiCad)(uri /Users/silardgal/Documents/Dev/SENSA/ODOMETRY/Lib/Arduino_MEGA.pretty)(options "")(descr ""))
+  (lib (name 16SVPC100M)(type Legacy)(uri ${KIPRJMOD}/Libs/16SVPC100M/16SVPC100M.mod)(options "")(descr ""))
+  (lib (name Hardware)(type KiCad)(uri ${KIPRJMOD}/Libs/Hardware.pretty)(options "")(descr ""))
+)
