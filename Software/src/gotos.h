@@ -1,7 +1,8 @@
+#include "system.h"
+
 #ifndef GOTOS_H
 #define GOTOS_H
 
-#include "system.h"
 
 
 /*        ____    ____  _______  __       __        ______   ____    __    ____ 

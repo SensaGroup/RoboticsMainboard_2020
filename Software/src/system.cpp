@@ -46,6 +46,7 @@ static void timer_isr(void) {
 
         if(sys_time == 90000) {
             // match end
+            odometry_end_match();
         }
 
     }
@@ -70,16 +71,14 @@ void init_system(void) {
 
     Serial.begin(115200);
 
-
     if(!init_actuator()) {
         Serial.println("Actuator is fucked...");
         fucked = true;
     }
 
-
     if(!init_nrf()) {
         Serial.println("NRF is fucked...");
-        fucked = true;
+        //fucked = true;
     }
 
     init_detection();
@@ -97,4 +96,5 @@ void init_system(void) {
     // wait for jumper to be pulled, loop while it is not pulled
     while(!jumper_pulled);
 
+    set_match_started();
 } // end of init_system

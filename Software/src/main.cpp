@@ -5,8 +5,10 @@
 void setup()
 {
   
-    init_system();
 
+    init_system();
+    robot(get_side(), 1);
+    while(1);
 }
 
 

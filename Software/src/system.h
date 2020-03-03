@@ -9,6 +9,7 @@
 #include "mechanism.h"
 #include "detection.h"
 #include "config.h"
+#include "positions.h"
 
 
 void init_system(void);
