@@ -70,15 +70,12 @@ void init_system(void) {
 
     Serial.begin(115200);
 
-    init_can();
 
     if(!init_actuator()) {
         Serial.println("Actuator is fucked...");
         fucked = true;
     }
 
-    actuator_stepper_move(1, STEPPER_FORWARD, SCP_LEFT_STEPPER_ID);
-    actuator_stepper_move(1, STEPPER_FORWARD, SCP_RIGHT_STEPPER_ID);
 
     if(!init_nrf()) {
         Serial.println("NRF is fucked...");

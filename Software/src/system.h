@@ -5,7 +5,6 @@
 #include "actuator.h"
 #include "TimerThree.h" 
 #include "nrf.h"
-#include "can.h"
 #include "odometry.h"
 #include "mechanism.h"
 #include "detection.h"

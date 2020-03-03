@@ -2,8 +2,6 @@
 #define ODOMETRY_H
 
 #include <Arduino.h>
-#include "can.h"
-
 #define ODOMETRY_CAN_ID 0xC3
 
 struct odometry_position
