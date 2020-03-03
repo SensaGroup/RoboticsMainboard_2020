@@ -8,11 +8,8 @@
 #include "odometry.h"
 #include "mechanism.h"
 #include "detection.h"
+#include "config.h"
 
-#define PIN_JUMPER  3
-#define PIN_TACTIC1 5
-#define PIN_TACTIC2 6
-#define PIN_SIDE    4
 
 void init_system(void);
 void set_match_started(void);
