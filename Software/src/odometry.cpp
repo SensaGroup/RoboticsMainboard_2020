@@ -2,10 +2,10 @@
 #include "odometry.h"
 
 
-static void odometry_send_command_print(char val)   { Serial2.print(val); }
-static void odometry_send_8bit(char val)            { Serial2.print(val); }
-static int odometry_get_command(void)               { return Serial2.read(); }
-static void odometry_send_16bit(int16_t val)        { Serial2.write((unsigned char)(val >> 8)); Serial2.write((unsigned char)(val & 0xFF)); }
+static void odometry_send_command_print(char val)   { Serial1.print(val); }
+static void odometry_send_8bit(char val)            { Serial1.print(val); }
+static int odometry_get_command(void)               { return Serial1.read(); }
+static void odometry_send_16bit(int16_t val)        { Serial1.write((unsigned char)(val >> 8)); Serial1.write((unsigned char)(val & 0xFF)); }
 
 // our monitoring odometry statuses
 struct odometry_position position=
@@ -23,7 +23,7 @@ struct odometry_position position=
  */
 bool init_odometry(void) {
 
-    Serial2.begin(57600);
+    Serial1.begin(57600);
 
     return true;
 
