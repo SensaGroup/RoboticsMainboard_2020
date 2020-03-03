@@ -20,6 +20,14 @@
 #define SERVO_PIN_4             8
 #define SERVO_PIN_5             9
 #define SERVO_PIN_6             10
+// SERVO START UP POSITION - gets executed at init
+#define SERVO_SUP_1             0 
+#define SERVO_SUP_2             0 
+#define SERVO_SUP_3             0 
+#define SERVO_SUP_4             0 
+#define SERVO_SUP_5             0 
+#define SERVO_SUP_6             0 
+
 
 #define VALVE_PIN_1             34 
 #define VALVE_PIN_2             35

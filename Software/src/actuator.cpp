@@ -1,30 +1,20 @@
 #include "actuator.h"
 #include "mechanism.h"
 
-Servo servo_1;  uint8_t servo1_current;
-Servo servo_2;  uint8_t servo2_current;
-Servo servo_3;  uint8_t servo3_current;
-Servo servo_4;  uint8_t servo4_current;
+Servo servo_1;
+Servo servo_2;
+Servo servo_3;
+Servo servo_4;
+Servo servo_5;
+Servo servo_6;
 
-uint8_t valve_pins[6]   = {36, 35, 34, 33, 32, 31};
-uint8_t bin_pins[2]     = { A4, A5};
-/*
- servo_1.write(0);
-    delay(1000);
-    servo_1.write(180);
-    */
+uint8_t servo_pins[6]   = {SERVO_PIN_1,SERVO_PIN_2,SERVO_PIN_3,SERVO_PIN_4,SERVO_PIN_5,SERVO_PIN_6};
+Servo servo_objects[6]  = {servo_1,servo_2,servo_3,servo_4,servo_5,servo_6};
+uint8_t servo_sup[6]    = {SERVO_SUP_1,SERVO_SUP_2,SERVO_SUP_3,SERVO_SUP_4,SERVO_SUP_5,SERVO_SUP_6};
 
-void move_servo_1(int pos) {
-    servo_1.write(pos);
-}
-void move_servo_2(int pos) {
-    servo_2.write(pos);
-}
-void move_servo_3(int pos) {
-    servo_3.write(pos);
-}
-void move_servo_4(int pos) {
-    servo_4.write(pos);
+
+void servo_move(uint8_t ID, uint8_t angle) {
+    servo_objects[ID-1].write(angle);
 }
 
 /*
@@ -33,6 +23,13 @@ void move_servo_4(int pos) {
  */
 bool init_actuator(void) {
 
+    for(unsigned int i = 0; i<sizeof(servo_pins); i++) {
+        servo_objects[i].attach(servo_pins[i]);
+    }
+
+    for(unsigned int i = 0; i<sizeof(servo_pins); i++) {
+        servo_move(i+1, servo_sup[i]);
+    }
 
     return true;
 } // end of init_actuator(...)
