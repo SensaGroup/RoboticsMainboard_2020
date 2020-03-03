@@ -61,6 +61,7 @@
 #define SIDE_PIN                46
 
 #define AX_CONTROL_PIN          4
+#define AX_BAUDRATE             (1000000ul)
 
 #define NRF_PIN_CS              48
 #define NRF_PIN_CE              47

@@ -1,6 +1,6 @@
 #include "actuator.h"
 #include "mechanism.h"
-
+#include "AX12A.h"
 
 
 
@@ -52,6 +52,16 @@ void valve_flip(uint8_t ID) {
 
 
 
+
+
+
+
+void AX_init(void) {
+    ax12a.begin(AX_BAUDRATE, AX_CONTROL_PIN, &Serial3);
+}
+
+
+
 /*
  * Function:    bool init_actuator(void)
  * Description: init all actuators + can bus board
@@ -78,6 +88,10 @@ bool init_actuator(void) {
         pinMode(valve_pins[i], OUTPUT);
         digitalWrite(valve_pins[i], LOW);
     } // END OF VALVE
+
+    // AX
+    AX_init();
+    // END OF AX
 
     return true;
 } // end of init_actuator(...)
