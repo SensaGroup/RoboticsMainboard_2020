@@ -54,12 +54,16 @@ void valve_flip(uint8_t ID) {
 
 
 
-
+uint8_t ax_id[4] = {AX_ID_1,AX_ID_2,AX_ID_3,AX_ID_4};
+uint8_t ax_sup[4] = {AX_SUP_1, AX_SUP_2, AX_SUP_3, AX_SUP_4};
 
 void AX_init(void) {
     ax12a.begin(AX_BAUDRATE, AX_CONTROL_PIN, &Serial3);
 }
 
+void AX_move(uint8_t ID, int position) {
+    ax12a.move(ax_id[ID - 1], position);
+}
 
 
 /*
@@ -91,6 +95,9 @@ bool init_actuator(void) {
 
     // AX
     AX_init();
+    for(unsigned int i=0; i<sizeof(ax_sup); i++) {
+        AX_move(ax_id[i], ax_sup[i]);
+    }
     // END OF AX
 
     return true;

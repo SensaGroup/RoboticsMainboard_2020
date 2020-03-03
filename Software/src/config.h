@@ -62,6 +62,14 @@
 
 #define AX_CONTROL_PIN          4
 #define AX_BAUDRATE             (1000000ul)
+#define AX_ID_1                 1
+#define AX_ID_2                 2
+#define AX_ID_3                 3
+#define AX_ID_4                 4
+#define AX_SUP_1                0
+#define AX_SUP_2                0 
+#define AX_SUP_3                0
+#define AX_SUP_4                0
 
 #define NRF_PIN_CS              48
 #define NRF_PIN_CE              47
