@@ -95,6 +95,6 @@ void init_system(void) {
     Serial.println("Ready... waiting for jumper...");
     
     // wait for jumper to be pulled, loop while it is not pulled
-    //while(!jumper_pulled);
+    while(!jumper_pulled);
 
 } // end of init_system

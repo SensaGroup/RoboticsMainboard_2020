@@ -17,7 +17,6 @@ uint8_t servo_pins[6]   = {SERVO_PIN_1,SERVO_PIN_2,SERVO_PIN_3,SERVO_PIN_4,SERVO
 Servo servo_objects[6]  = {servo_1,servo_2,servo_3,servo_4,servo_5,servo_6};
 uint8_t servo_sup[6]    = {SERVO_SUP_1,SERVO_SUP_2,SERVO_SUP_3,SERVO_SUP_4,SERVO_SUP_5,SERVO_SUP_6};
 
-
 void servo_move(uint8_t ID, uint8_t angle) {
     servo_objects[ID-1].write(angle);
 }
@@ -35,6 +34,20 @@ void relay_click(uint8_t ID, uint8_t state) {
 
 void relay_flip(uint8_t ID) {
     digitalWrite(relay_pins[ID-1], !digitalRead(relay_pins[ID-1]));
+}
+
+
+
+
+
+uint8_t valve_pins[5]   = {VALVE_PIN_1,VALVE_PIN_2,VALVE_PIN_3,VALVE_PIN_4,VALVE_PIN_5};
+
+void valve_click(uint8_t ID, uint8_t state) {
+    digitalWrite(valve_pins[ID-1], state);
+}
+
+void valve_flip(uint8_t ID) {
+    digitalWrite(valve_pins[ID-1], !digitalRead(valve_pins[ID-1]));
 }
 
 
@@ -59,6 +72,12 @@ bool init_actuator(void) {
         pinMode(relay_pins[i], OUTPUT);
         digitalWrite(relay_pins[i], LOW);
     } // END OF RELAY
+
+    // VALVE
+    for(unsigned int i = 0; i<sizeof(valve_pins); i++) {
+        pinMode(valve_pins[i], OUTPUT);
+        digitalWrite(valve_pins[i], LOW);
+    } // END OF VALVE
 
     return true;
 } // end of init_actuator(...)

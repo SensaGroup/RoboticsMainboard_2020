@@ -42,6 +42,13 @@
 #define SENSOR_PIN_4            43
 #define SENSOR_PIN_5            44
 #define SENSOR_PIN_6            45
+#define SENSOR_FRONT_LEFT       SENSOR_PIN_1
+#define SENSOR_FRONT_CENTER     SENSOR_PIN_2
+#define SENSOR_FRONT_RIGHT      SENSOR_PIN_3
+#define SENSOR_BACK_LEFT        SENSOR_PIN_4
+#define SENSOR_BACK_CENTER      SENSOR_PIN_5
+#define SENSOR_BACK_RIGHT       SENSOR_PIN_6
+#define SENSOR_DETECTION_LEVEL  1 // the status read at detection
 
 #define ENCODER1_PIN_A          2 
 #define ENCODER1_PIN_B          3
