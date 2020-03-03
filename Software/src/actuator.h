@@ -4,8 +4,11 @@
 #include <Arduino.h>
 #include <Servo.h>
 
-#define ACTUATOR_CAN_ID 0xD4
-
 bool    init_actuator(void);
+void servo_move(uint8_t ID, uint8_t angle);
+
+void relay_click(uint8_t ID, uint8_t state);
+void relay_flip(uint8_t ID);
+
 
 #endif

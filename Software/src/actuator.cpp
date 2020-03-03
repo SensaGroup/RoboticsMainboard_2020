@@ -1,6 +1,11 @@
 #include "actuator.h"
 #include "mechanism.h"
 
+
+
+
+
+
 Servo servo_1;
 Servo servo_2;
 Servo servo_3;
@@ -17,19 +22,43 @@ void servo_move(uint8_t ID, uint8_t angle) {
     servo_objects[ID-1].write(angle);
 }
 
+
+
+
+
+
+uint8_t relay_pins[5]   = {RELAY_PIN_1,RELAY_PIN_2,RELAY_PIN_3,RELAY_PIN_4,RELAY_PIN_5};
+
+void relay_click(uint8_t ID, uint8_t state) {
+    digitalWrite(relay_pins[ID-1], state);
+}
+
+void relay_flip(uint8_t ID) {
+    digitalWrite(relay_pins[ID-1], !digitalRead(relay_pins[ID-1]));
+}
+
+
+
 /*
  * Function:    bool init_actuator(void)
  * Description: init all actuators + can bus board
  */
 bool init_actuator(void) {
 
+    // SERVO 
     for(unsigned int i = 0; i<sizeof(servo_pins); i++) {
         servo_objects[i].attach(servo_pins[i]);
     }
 
     for(unsigned int i = 0; i<sizeof(servo_pins); i++) {
         servo_move(i+1, servo_sup[i]);
-    }
+    }// END OF SERVO
+
+    // RELAY
+    for(unsigned int i = 0; i<sizeof(relay_pins); i++) {
+        pinMode(relay_pins[i], OUTPUT);
+        digitalWrite(relay_pins[i], LOW);
+    } // END OF RELAY
 
     return true;
 } // end of init_actuator(...)
