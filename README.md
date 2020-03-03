@@ -8,6 +8,7 @@ We used an Arduino Mega for the base and we developed the extension board
 
 ## Features
 - 5V/5VA/12V inputs with protection
+- 2 Sockets for stepper drivers, based on the A4988 pinout
 - 6x servo pinouts with external 5V power supply
 - 6x 12V pneumatic valve controller
 - 5x 1AMP relays 
