@@ -2,13 +2,13 @@
 #include "system.h"
 
 void init_detection() {
-    pinMode(PIN_TACTIC2, INPUT);
-    pinMode(PIN_TACTIC1, OUTPUT);
-    digitalWrite(PIN_TACTIC1, HIGH);
+    pinMode(TACTIC1_PIN, INPUT);
+    pinMode(TACTIC2_PIN, OUTPUT);
+    digitalWrite(TACTIC2_PIN, HIGH);
 }
 void set_direction(uint8_t dir) {
-    digitalWrite(PIN_TACTIC1, dir);
+    digitalWrite(TACTIC1_PIN, dir);
 }
 byte get_detection() {  
-    return(digitalRead(PIN_TACTIC2));
+    return(digitalRead(TACTIC2_PIN));
 }

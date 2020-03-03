@@ -16,8 +16,8 @@ static void pull_jumper() { jumper_pulled = true; }
  * Description:     setup the jumper
  */
 static void init_jumper(void) {
-    pinMode(PIN_JUMPER, INPUT_PULLUP);
-    attachInterrupt(digitalPinToInterrupt(PIN_JUMPER), pull_jumper, CHANGE);
+    pinMode(JUMPER_PIN, INPUT_PULLUP);
+    attachInterrupt(digitalPinToInterrupt(JUMPER_PIN), pull_jumper, CHANGE);
 } // end of init_jumper(...)
 
 /*
@@ -27,13 +27,13 @@ static void init_jumper(void) {
 static void init_switches() {
     //pinMode(PIN_TACTIC1, INPUT);
     //pinMode(PIN_TACTIC2, INPUT);
-    pinMode(PIN_SIDE,    INPUT);
+    pinMode(SIDE_PIN,    INPUT);
 } // end of init_switches()
 
 // helper functions to read the switches
 //int get_tactic1(void)   { return digitalRead(PIN_TACTIC1);  }
 //int get_tactic2(void)   { return digitalRead(PIN_TACTIC2);  }
-int get_side(void)      { return digitalRead(PIN_SIDE);     }
+int get_side(void)      { return digitalRead(SIDE_PIN);     }
 
 /*
  * Function:        static void timer_isr(void)
